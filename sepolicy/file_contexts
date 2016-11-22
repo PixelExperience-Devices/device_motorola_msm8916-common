@@ -8,6 +8,8 @@
 /(vendor|system/vendor)/bin/init\.mmi\.boot\.sh             u:object_r:mmi_boot_sh_exec:s0
 /(vendor|system/vendor)/bin/init\.mmi\.touch\.sh            u:object_r:mmi_touch_sh_exec:s0
 /(vendor|system/vendor)/bin/stml0xx_wrapper\.sh             u:object_r:stml0xx_exec:s0
+/(vendor|system/vendor)/bin/init\.qcom\.devstart\.sh                               u:object_r:init-qcom-devstart-sh_exec:s0
+/(vendor|system/vendor)/bin/init\.qcom\.devwait\.sh                                u:object_r:init-qcom-devwait-sh_exec:s0
 
 # mmi_touch related /sys files
 /sys/bus/i2c/drivers(/.*)?                                  u:object_r:sysfs_mmi_touch:s0
@@ -59,3 +61,8 @@
 # Light HAL
 /system/vendor/bin/hw/android\.hardware\.light@2\.0-service.harpia        u:object_r:hal_light_default_exec:s0
 /sys/class/leds(/.*)?   u:object_r:sysfs_leds:s0
+
+# Shell files
+
+# Sysfs entry for ADSP
+/sys/kernel/boot_adsp/boot                                                u:object_r:sysfs_audio:s0
