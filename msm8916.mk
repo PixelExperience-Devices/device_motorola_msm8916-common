@@ -213,7 +213,9 @@ PRODUCT_PACKAGES += \
     init.qcom.ril.sh \
     init.qcom.rc \
     stml0xx_wrapper.sh \
-    ueventd.rc
+    ueventd.rc \
+    init.qcom.devstart.sh \
+    init.qcom.devwait.sh
 
 # RIL
 PRODUCT_PACKAGES += \
